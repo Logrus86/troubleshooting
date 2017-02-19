@@ -1,0 +1,98 @@
+2017-02-19 16:58:11
+Full thread dump Java HotSpot(TM) 64-Bit Server VM (25.121-b13 mixed mode):
+
+"DestroyJavaVM" #16 prio=5 os_prio=0 tid=0x00000000024ad800 nid=0x18fc waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Thread-4" #15 prio=5 os_prio=0 tid=0x0000000017490000 nid=0x1b9c waiting for monitor entry [0x000000001810e000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.bp.epam.MyThread.run(MyThread.java:26)
+	- waiting to lock <0x00000000e2d343e8> (a java.lang.String)
+
+"Thread-3" #14 prio=5 os_prio=0 tid=0x0000000017487000 nid=0xb5c waiting for monitor entry [0x000000001800f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.bp.epam.MyThread.run(MyThread.java:26)
+	- waiting to lock <0x00000000e2d343e8> (a java.lang.String)
+
+"Thread-2" #13 prio=5 os_prio=0 tid=0x0000000017486800 nid=0x174c waiting for monitor entry [0x0000000017f0e000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.bp.epam.MyThread.run(MyThread.java:26)
+	- waiting to lock <0x00000000e2d343e8> (a java.lang.String)
+
+"Thread-1" #12 prio=5 os_prio=0 tid=0x0000000017484800 nid=0xa2c waiting for monitor entry [0x0000000017e0f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.bp.epam.MyThread.run(MyThread.java:26)
+	- waiting to lock <0x00000000e2d343e8> (a java.lang.String)
+
+"Thread-0" #11 prio=5 os_prio=0 tid=0x000000001747f800 nid=0x450 waiting on condition [0x0000000017d0f000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+	at java.lang.Thread.sleep(Native Method)
+	at com.bp.epam.MyThread.run(MyThread.java:28)
+	- locked <0x00000000e2d343e8> (a java.lang.String)
+
+"Monitor Ctrl-Break" #10 daemon prio=5 os_prio=0 tid=0x0000000017460000 nid=0x13c runnable [0x0000000017b8f000]
+   java.lang.Thread.State: RUNNABLE
+	at com.intellij.rt.execution.application.AppMain.triggerControlBreak(Native Method)
+	at com.intellij.rt.execution.application.AppMain.access$000(AppMain.java:33)
+	at com.intellij.rt.execution.application.AppMain$1.run(AppMain.java:89)
+	at java.lang.Thread.run(Thread.java:745)
+
+"Service Thread" #9 daemon prio=9 os_prio=0 tid=0x00000000173ae800 nid=0x14e4 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C1 CompilerThread2" #8 daemon prio=9 os_prio=2 tid=0x0000000017398800 nid=0x10ec waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread1" #7 daemon prio=9 os_prio=2 tid=0x0000000015ba8800 nid=0x12e8 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #6 daemon prio=9 os_prio=2 tid=0x0000000015b57000 nid=0x17f8 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Attach Listener" #5 daemon prio=5 os_prio=2 tid=0x0000000015b56000 nid=0x1a80 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Signal Dispatcher" #4 daemon prio=9 os_prio=2 tid=0x0000000015b55000 nid=0x998 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Finalizer" #3 daemon prio=8 os_prio=1 tid=0x00000000026ac000 nid=0x1268 in Object.wait() [0x0000000016e9f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00000000e2c08ec8> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+	- locked <0x00000000e2c08ec8> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)
+
+"Reference Handler" #2 daemon prio=10 os_prio=2 tid=0x00000000026a3000 nid=0x580 in Object.wait() [0x0000000016d9f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00000000e2c06b68> (a java.lang.ref.Reference$Lock)
+	at java.lang.Object.wait(Object.java:502)
+	at java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+	- locked <0x00000000e2c06b68> (a java.lang.ref.Reference$Lock)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+
+"VM Thread" os_prio=2 tid=0x0000000015b17000 nid=0x350 runnable 
+
+"GC task thread#0 (ParallelGC)" os_prio=0 tid=0x00000000025c7000 nid=0x1838 runnable 
+
+"GC task thread#1 (ParallelGC)" os_prio=0 tid=0x00000000025c8800 nid=0x16a0 runnable 
+
+"GC task thread#2 (ParallelGC)" os_prio=0 tid=0x00000000025ca000 nid=0x1a90 runnable 
+
+"GC task thread#3 (ParallelGC)" os_prio=0 tid=0x00000000025cb800 nid=0xacc runnable 
+
+"VM Periodic Task Thread" os_prio=2 tid=0x00000000173b1800 nid=0x10d4 waiting on condition 
+
+JNI global references: 16
+
+Heap
+ PSYoungGen      total 26112K, used 4956K [0x00000000e2c00000, 0x00000000e4900000, 0x0000000100000000)
+  eden space 22528K, 22% used [0x00000000e2c00000,0x00000000e30d7308,0x00000000e4200000)
+  from space 3584K, 0% used [0x00000000e4580000,0x00000000e4580000,0x00000000e4900000)
+  to   space 3584K, 0% used [0x00000000e4200000,0x00000000e4200000,0x00000000e4580000)
+ ParOldGen       total 60416K, used 0K [0x00000000a8400000, 0x00000000abf00000, 0x00000000e2c00000)
+  object space 60416K, 0% used [0x00000000a8400000,0x00000000a8400000,0x00000000abf00000)
+ Metaspace       used 3350K, capacity 4496K, committed 4864K, reserved 1056768K
+  class space    used 372K, capacity 388K, committed 512K, reserved 1048576K
