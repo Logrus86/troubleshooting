@@ -1,8 +1,5 @@
 package com.bp.epam;
 
-/**
- * Created by User on 19.02.2017.
- */
 public class HomeWork4 {
 
     public static void main(String[] a) {

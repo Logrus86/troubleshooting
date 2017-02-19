@@ -10,24 +10,36 @@ import java.util.List;
 
 public class HomeWork5 {
 
-    public static void main(String[] args) throws IOException {
-        initialWay();
+    private static final String FILE_NAME = "resource/Task #5 - Data.txt";
+
+    public static void main(String[] args) throws IOException, InterruptedException {
+        withMemoryLeak();
+        //withoutMemoryLeak();
     }
 
-    private static void initialWay() throws IOException {
+    private static void withMemoryLeak() throws IOException, InterruptedException {
         List<String> threeSymbolsList = new ArrayList<String>();
-        FileReader fr = new FileReader("resource/Task #5 - Data.txt");
+        FileReader fr = new FileReader(FILE_NAME);
         BufferedReader br = new BufferedReader(fr);
         String line;
         while ((line = br.readLine()) != null) {
-            threeSymbolsList.add(line.substring(0, 2));
+            threeSymbolsList.add(line.substring(0, 3));
+            Thread.sleep(1);
         }
         fr.close();
         br.close();
-        System.out.printf(threeSymbolsList.toString());
+        System.out.println(threeSymbolsList.toString());
     }
 
-    private static void fixedWay() throws IOException {
-
+    private static void withoutMemoryLeak() throws IOException {
+        List<String> threeSymbolsList = new ArrayList<String>();
+        FileReader fr = new FileReader(FILE_NAME);
+        BufferedReader br = new BufferedReader(fr);
+        for (String line; (line = br.readLine()) != null; ) {
+            threeSymbolsList.add(new String(line.substring(0, 3)));
+        }
+        fr.close();
+        br.close();
+        System.out.println(threeSymbolsList.toString());
     }
 }
